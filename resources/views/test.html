@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	    crossorigin="anonymous"></script>    
+
+    <style>
+
+     .countdown {
+       background-color: gray;
+       padding-x: 10px;
+       padding-y: 5px;
+       width: 400px;
+       text-align: center;
+       font-size: 40px;
+     }
+
+     digit {
+       background-color: white;
+       padding: 20px;
+     }
+    </style>
+
+  </head>
+  <body>
+
+    <section class="countdown">
+      <digit class="hour"> 123 </digit> : 
+      <digit class="minutes"> 30 </digit> : 
+      <digit class="seconds"> 23 </digit> 
+    </section>
+
+    <div class="timer"></div>
+
+    <pre id="console"></pre>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
