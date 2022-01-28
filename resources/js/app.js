@@ -1,9 +1,13 @@
-require('./bootstrap');
+// require('./bootstrap');
+
 const {getCountDownRemain} = require('./utils');
+
+
+const releaseDate = new Date("2021", "7", "30");
 
 setInterval(()=> {
   
-  var cdr = getCountDownRemain(new Date("2021", "6", "30"));
+  var cdr = getCountDownRemain(releaseDate);
 
   var dayTimer = document.getElementById("dayTimer");
   var hourTimer = document.getElementById("hourTimer");
@@ -18,4 +22,3 @@ setInterval(()=> {
 }, 1000);
 
 
-$('#notifyButton')

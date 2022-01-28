@@ -12,9 +12,9 @@ function getCountDownRemain(countToDate) {
   var remainMinutes = Math.floor(remainSeconds / 60);
   var minuteTimer = remainMinutes % 60;
   var remainHours = Math.floor(remainMinutes / 60);
-  var hourTimer = remainHours % 60;
+  var hourTimer = remainHours % 24;
   var remainDays = Math.floor(remainHours / 24);
-  var dayTimer = remainDays % 24;
+  var dayTimer = remainDays;
 
   return [dayTimer, hourTimer, minuteTimer, secondTimer, milliTimer];
 }

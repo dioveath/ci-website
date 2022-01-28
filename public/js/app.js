@@ -1845,8 +1845,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var _require = __webpack_require__(/*! ./utils */ "./resources/js/utils.js"),
     getCountDownRemain = _require.getCountDownRemain;
 
+const releaseDate = new Date("2021", "7", "30");
+
 setInterval(function () {
-  var cdr = getCountDownRemain(new Date("2021", "6", "30"));
+  var cdr = getCountDownRemain(releaseDate);
   var dayTimer = document.getElementById("dayTimer");
   var hourTimer = document.getElementById("hourTimer");
   var minuteTimer = document.getElementById("minuteTimer");
@@ -1856,7 +1858,6 @@ setInterval(function () {
   minuteTimer.innerHTML = cdr[2].pad(2);
   secondTimer.innerHTML = cdr[3].pad(2);
 }, 1000);
-$('#notifyButton');
 
 /***/ }),
 
@@ -1921,9 +1922,9 @@ function getCountDownRemain(countToDate) {
   var remainMinutes = Math.floor(remainSeconds / 60);
   var minuteTimer = remainMinutes % 60;
   var remainHours = Math.floor(remainMinutes / 60);
-  var hourTimer = remainHours % 60;
+  var hourTimer = remainHours % 24;
   var remainDays = Math.floor(remainHours / 24);
-  var dayTimer = remainDays % 24;
+  var dayTimer = remainDays;
   return [dayTimer, hourTimer, minuteTimer, secondTimer, milliTimer];
 }
 
